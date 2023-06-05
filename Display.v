@@ -1,4 +1,4 @@
-module Display();
+/*module Display();
 
   // VGA timing generation
   always_ff @(posedge clk or posedge reset) begin
@@ -45,3 +45,4 @@ module Display();
         update_game_state(x);
       end
     end
+*/

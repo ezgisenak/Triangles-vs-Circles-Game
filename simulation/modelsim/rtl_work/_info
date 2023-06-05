@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
+vinput_handler
+Ii0EL4Zc2@Fm2i94YbQY4O2
+VFiQDXR00[c^@68<=<iCZ93
+Z1 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
+w1685879089
+8D:/altera/13.1/Projects/TermProject/input_handler.v
+FD:/altera/13.1/Projects/TermProject/input_handler.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work work -O0
+!i10b 1
+!s100 _6c30PcWkVa:9`@@7<RJS0
+!s85 0
+!s108 1685879099.056000
+!s107 D:/altera/13.1/Projects/TermProject/input_handler.v|
+!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/input_handler.v|
+!s101 -O0
+vinput_handler_tb
+!i10b 1
+!s100 gi;:9BY;kZ_CaQ?eA]HHQ0
+IR7EYSAKk6R>?EIIS^iP8g0
+V:NoE9i287c?NdDT?57MIa1
+R1
+w1685879444
+8D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+FD:/altera/13.1/Projects/TermProject/input_handler_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1685879903.676000
+!s107 D:/altera/13.1/Projects/TermProject/input_handler_tb.v|
+!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/input_handler_tb.v|
+!s101 -O0
+R3

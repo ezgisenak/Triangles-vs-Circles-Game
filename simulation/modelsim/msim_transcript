@@ -1,0 +1,293 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do termProject_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/input_handler.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+# 
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_input_handler
+# 
+# Top level modules:
+# 	tb_input_handler
+# Load canceled
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb
+# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb 
+# Loading work.input_handler_tb
+# Loading work.input_handler
+# do termProject_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/input_handler.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+# 
+add wave -position end  sim:/input_handler_tb/y_output
+add wave -position end  sim:/input_handler_tb/x_output
+add wave -position end  sim:/input_handler_tb/valid_coordinate
+add wave -position end  sim:/input_handler_tb/reset
+add wave -position end  sim:/input_handler_tb/logic_1_button
+add wave -position end  sim:/input_handler_tb/logic_0_button
+add wave -position end  sim:/input_handler_tb/clk
+add wave -position end  sim:/input_handler_tb/activity_button
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# Error: Invalid coordinate or output. Expected (3, 1), got ( 0,  0).
+# ** Note: $finish    : D:/altera/13.1/Projects/TermProject/input_handler_tb.v(72)
+#    Time: 400 ns  Iteration: 0  Instance: /input_handler_tb
+# 1
+# Break in Module input_handler_tb at D:/altera/13.1/Projects/TermProject/input_handler_tb.v line 72
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+restart
+# Loading work.input_handler_tb
+# Loading work.input_handler
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+restart
+# Loading work.input_handler_tb
+# Loading work.input_handler
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: D:/altera/13.1/Projects/TermProject/input_handler_tb.v(2): near "initial": syntax error, unexpected initial, expecting class
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+# Load canceled
+restart
+# Loading work.input_handler_tb
+run -all
+# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
+# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
+# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+restart
+# Loading work.input_handler_tb
+run -all
+# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
+# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
+# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
+# At time                  110ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
+# At time                  190ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
+# At time                  270ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
+# At time                  350ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
+# At time                  430ns, x_output = 0111, y_output = 0000, valid_coordinate = 0
+# At time                  510ns, x_output = 1011, y_output = 0000, valid_coordinate = 0
+# At time                  590ns, x_output = 1101, y_output = 0000, valid_coordinate = 0
+# At time                  670ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+# internal error on MenuItemCan 
+# m is .mBar.file label is End Simulation state is disabled 
+#  Trace back:  
+#    <5: ::Vsimmenu::MenuItemCan .mBar.file {End Simulation} disabled 
+#    >4: ::.main_pane.wave.interior.cs.body.pw.wf.tree Action .main_pane.wave SetMenuState {{can_open {::Vsimmenu::MenuItemCan .mBar.file Open...}} {can_close_file {::Vsimmenu::MenuItemCan .mBar.file {End Simulation}}} {can_save {::Vsimmenu::MenuItemCan .mBar.file {Save Dataset...}}} {can_saveas {::Vsimmenu::MenuItemCan .mBar.file {Save List...}}} {can_report {::Vsimmenu::MenuItemCan .mBar.file Report...}} {can_use_source_file {::Vsimmenu::MenuItemCan .mBar.file {Use Source...}}} {can_environment {::Vsimmenu::MenuItemCan .mBar.file Environment}} {can_page_setup {::Vsimmenu::MenuItemCan .mBar.file {Page Setup...}}} {can_print {::Vsimmenu::MenuItemCan .mBar.file Print...}} {can_print_postscript {::Vsimmenu::MenuItemCan .mBar.file {Print Postscript...}}} {can_close_window {::Vsimmenu::MenuItemCan .mBar.file {Close Window}}}} 
+#    <3: ::Wave <trace variable?>  
+#    >2: ::.vcop Action SetMenuState {{can_open {::Vsimmenu::MenuItemCan .mBar.file Open...}} {can_close_file {::Vsimmenu::MenuItemCan .mBar.file {End Simulation}}} {can_save {::Vsimmenu::MenuItemCan .mBar.file {Save Dataset...}}} {can_saveas {::Vsimmenu::MenuItemCan .mBar.file {Save List...}}} {can_report {::Vsimmenu::MenuItemCan .mBar.file Report...}} {can_use_source_file {::Vsimmenu::MenuItemCan .mBar.file {Use Source...}}} {can_environment {::Vsimmenu::MenuItemCan .mBar.file Environment}} {can_page_setup {::Vsimmenu::MenuItemCan .mBar.file {Page Setup...}}} {can_print {::Vsimmenu::MenuItemCan .mBar.file Print...}} {can_print_postscript {::Vsimmenu::MenuItemCan .mBar.file {Print Postscript...}}} {can_close_window {::Vsimmenu::MenuItemCan .mBar.file {Close Window}}}} 
+#    <1: ::Vsimmenu::DefaultMenuPostCmd .mBar.file {FileMenuPostCmd .mBar.file} SetMenuState 
+restart
+# Loading work.input_handler_tb
+run -all
+# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
+# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
+# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
+# At time                  110ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
+# At time                  190ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
+# At time                  270ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
+# At time                  350ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
+# At time                  430ns, x_output = 0111, y_output = 0000, valid_coordinate = 0
+# At time                  510ns, x_output = 1011, y_output = 0000, valid_coordinate = 0
+# At time                  590ns, x_output = 1101, y_output = 0000, valid_coordinate = 0
+# At time                  670ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
+restart

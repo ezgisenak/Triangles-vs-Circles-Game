@@ -1,0 +1,53 @@
+module input_handler_tb;
+
+  reg clk;
+  reg reset;
+  reg logic_0_button;
+  reg logic_1_button;
+  reg activity_button;
+  wire [3:0] x_output;
+  wire [3:0] y_output;
+  wire valid_coordinate;
+
+  // Instantiate the module
+  input_handler ih (
+    .clk(clk), 
+    .reset(reset), 
+    .logic_0_button(logic_0_button), 
+    .logic_1_button(logic_1_button), 
+    .activity_button(activity_button), 
+    .x_output(x_output), 
+    .y_output(y_output), 
+    .valid_coordinate(valid_coordinate)
+  );
+
+  initial begin
+    // Initial conditions
+    clk = 0;
+    reset = 0;
+    logic_0_button = 0;
+    logic_1_button = 0;
+    activity_button = 0;
+
+    // Reset pulse
+    #5 reset = 1;
+    #5 reset = 0;
+
+    // Test the debouncing and FSM
+    #10 logic_0_button = 1;  // Should be debounced, FSM should go to state '1'
+    #10 logic_0_button = 0;
+    #10 logic_1_button = 1;  // Should be debounced, FSM should go to state '0'
+    #10 logic_1_button = 0;
+    #10 logic_0_button = 1;  // Should be debounced, FSM should go to state '1'
+    #10 logic_0_button = 0;
+    #10 logic_1_button = 1;  // Should be debounced, FSM should go to state '0'
+    #10 logic_1_button = 0;
+    #10 activity_button = 1; // Should be debounced, FSM should go to state '0', valid_coordinate should be '1'
+    #10 activity_button = 0;
+    #10 $finish; // Stop the simulation
+  end
+
+  // Clock generator
+  always #5 clk = ~clk;
+
+endmodule

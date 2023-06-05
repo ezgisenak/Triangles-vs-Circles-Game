@@ -1,0 +1,30 @@
+module Debouncer (
+    input wire clk,
+    input wire reset,
+    input wire button_in,
+    output reg button_out
+);
+
+    localparam DEBOUNCE_DELAY = 50_000_000; // Adjust this value based on your clock frequency and required debounce time
+    reg [31:0] counter = 0;
+    reg button_state = 0;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            button_state <= 0;
+            counter <= 0;
+            button_out <= 0;
+        end else begin
+            if (button_in != button_state) begin
+                counter <= counter + 1;
+                if (counter >= DEBOUNCE_DELAY) begin
+                    counter <= 0;
+                    button_state <= ~button_state;
+                    button_out <= button_state;
+                end
+            end else begin
+                counter <= 0;
+            end
+        end
+    end
+endmodule

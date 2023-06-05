@@ -1,0 +1,62 @@
+module input_handler(
+    input logic clk,
+    input logic reset,
+    input logic logic_0_button,
+    input logic logic_1_button,
+    input logic activity_button,
+    output logic [3:0] x_output,
+    output logic [3:0] y_output,
+    output logic valid_coordinate
+);
+
+  logic [3:0] x_temp, y_temp;
+  logic state_x; // State of the FSM
+  logic valid_coordinate_temp; 
+  logic logic_0_button_prev, logic_1_button_prev, activity_button_prev; // Button states in the previous clock cycle
+  logic logic_0_button_debounced, logic_1_button_debounced, activity_button_debounced; // Debounced button states
+
+  // Debouncing logic for logic_0_button
+  always @(posedge clk or negedge reset) begin
+    if(!reset) logic_0_button_prev <= 1'b0;
+    else if(clk) logic_0_button_prev <= logic_0_button;
+  end
+  assign logic_0_button_debounced = logic_0_button & ~logic_0_button_prev;
+
+  // Debouncing logic for logic_1_button
+  always @(posedge clk or negedge reset) begin
+    if(!reset) logic_1_button_prev <= 1'b0;
+    else if(clk) logic_1_button_prev <= logic_1_button;
+  end
+  assign logic_1_button_debounced = logic_1_button & ~logic_1_button_prev;
+
+  // Debouncing logic for activity_button
+  always @(posedge clk or negedge reset) begin
+    if(!reset) activity_button_prev <= 1'b0;
+    else if(clk) activity_button_prev <= activity_button;
+  end
+  assign activity_button_debounced = activity_button & ~activity_button_prev;
+
+  always @(posedge clk or negedge reset) begin
+    if(!reset) begin
+      state_x <= 1'b0;
+      x_temp <= 4'b0000;
+      y_temp <= 4'b0000;
+      valid_coordinate_temp <= 1'b0;
+    end
+    else if(activity_button_debounced) begin
+      state_x <= 1'b0;
+      valid_coordinate_temp <= 1'b1;
+    end
+    else if(logic_0_button_debounced || logic_1_button_debounced) begin
+      if(state_x) x_temp <= {x_temp[2:0], logic_1_button_debounced};
+      else y_temp <= {y_temp[2:0], logic_1_button_debounced};
+      state_x <= ~state_x;
+      valid_coordinate_temp <= 1'b0;
+    end
+  end
+
+  assign x_output = x_temp;
+  assign y_output = y_temp;
+  assign valid_coordinate = valid_coordinate_temp;
+
+endmodule

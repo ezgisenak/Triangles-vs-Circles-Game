@@ -1,4 +1,4 @@
-module TrianglesVsCircles (
+/*module TrianglesVsCircles (
   input wire clk, 
   input wire reset,
   input wire logic_0_button,
@@ -115,3 +115,4 @@ function automatic is_valid_move;
 endfunction
 
 endmodule
+*/
