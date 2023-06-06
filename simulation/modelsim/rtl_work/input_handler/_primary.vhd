@@ -9,6 +9,9 @@ entity input_handler is
         activity_button : in     vl_logic;
         x_output        : out    vl_logic_vector(3 downto 0);
         y_output        : out    vl_logic_vector(3 downto 0);
-        valid_coordinate: out    vl_logic
+        x_counter       : out    vl_logic_vector(3 downto 0);
+        y_counter       : out    vl_logic_vector(3 downto 0);
+        valid_coordinate: out    vl_logic;
+        state           : out    vl_logic_vector(1 downto 0)
     );
 end input_handler;

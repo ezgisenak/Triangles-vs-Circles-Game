@@ -2,12 +2,14 @@ module input_handler (
     input wire clk, reset,
     input wire logic_0_button, logic_1_button, activity_button,
     output reg [3:0] x_output, y_output,
-    output reg valid_coordinate
+    output reg [3:0] x_counter, y_counter,
+    output reg valid_coordinate,
+    output reg [1:0] state
 );
 
-    reg [3:0] x_counter, y_counter;
+    reg [1:0] next_state;
     localparam IDLE = 2'b00, X_INPUT = 2'b01, Y_INPUT = 2'b10, VALIDATE = 2'b11;
-    reg [1:0] state, next_state;
+    
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
@@ -22,18 +24,18 @@ module input_handler (
             if (state == X_INPUT) begin
                 if (~logic_0_button) begin
                     x_counter <= x_counter + 1'b1;
-                    x_output <= (x_output >> 1) + 4'b1000;
+                    x_output <= (x_output >> 1);
                 end else if (~logic_1_button) begin
                     x_counter <= x_counter + 1'b1;
-                    x_output <= (x_output >> 1);
+                    x_output <= (x_output >> 1) + 4'b1000;
                 end
             end else if (state == Y_INPUT) begin
-                if (~logic_0_button) begin
-                    y_counter <= y_counter + 1'b1;
+                if (~logic_1_button) begin
                     y_output <= (y_output >> 1) + 4'b1000;
-                end else if (~logic_1_button) begin
                     y_counter <= y_counter + 1'b1;
+                end else if (~logic_0_button) begin
                     y_output <= (y_output >> 1);
+                    y_counter <= y_counter + 1'b1;                    
                 end
             end
             if (state == VALIDATE && ~activity_button)
@@ -43,36 +45,43 @@ module input_handler (
         end
     end
 
-    always @(state or logic_0_button or logic_1_button or activity_button) begin
-        case (state)
-            IDLE: begin
-                if (~logic_0_button || ~logic_1_button)
-                    next_state = X_INPUT;
-                else
-                    next_state = IDLE;
-            end
-            X_INPUT: begin
-                if (x_counter == 4'b0100)
-                    next_state = Y_INPUT;
-                else if (~logic_0_button || ~logic_1_button)
-                    next_state = X_INPUT;
-                else
-                    next_state = IDLE;
-            end
-            Y_INPUT: begin
-                if (y_counter == 4'b0100)
-                    next_state = VALIDATE;
-                else if (~logic_0_button || ~logic_1_button)
-                    next_state = Y_INPUT;
-                else
-                    next_state = IDLE;
-            end
-            VALIDATE: begin
-                if (~activity_button)
-                    next_state = IDLE;
-                else
-                    next_state = VALIDATE;
-            end
-        endcase
+    always @* begin
+        if (reset) next_state = IDLE;
+        else begin
+            case (state)
+                IDLE: begin
+                    if (~logic_0_button || ~logic_1_button) begin
+								if (x_counter == 4'b0100)
+									next_state = Y_INPUT;
+								else 
+									next_state = X_INPUT;
+							end
+                    else
+                        next_state = IDLE;
+                end
+                X_INPUT: begin
+                    if (x_counter == 4'b0100)
+                        next_state = Y_INPUT;
+                    else if (~logic_0_button || ~logic_1_button)
+                        next_state = X_INPUT;
+                    else
+                        next_state = IDLE;
+                end
+                Y_INPUT: begin
+                    if (y_counter == 4'b0100)
+                        next_state = VALIDATE;
+						else if (~logic_0_button || ~logic_1_button)
+                        next_state = Y_INPUT;
+						else
+                        next_state = IDLE;
+                end
+                VALIDATE: begin
+                    if (~activity_button)
+                        next_state = IDLE;
+                    else
+                        next_state = VALIDATE;
+                end
+            endcase
+        end
     end
 endmodule

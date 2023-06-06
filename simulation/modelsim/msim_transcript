@@ -25,25 +25,6 @@ vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_ha
 # 	input_handler
 vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module tb_input_handler
-# 
-# Top level modules:
-# 	tb_input_handler
-# Load canceled
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
-# 
-# Top level modules:
-# 	input_handler_tb
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler
-# 
-# Top level modules:
-# 	input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module input_handler_tb
 # 
 # Top level modules:
@@ -68,65 +49,51 @@ vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui wor
 # 	input_handler
 # 
 add wave -position end  sim:/input_handler_tb/y_output
+add wave -position end  sim:/input_handler_tb/y_counter
 add wave -position end  sim:/input_handler_tb/x_output
+add wave -position end  sim:/input_handler_tb/x_counter
 add wave -position end  sim:/input_handler_tb/valid_coordinate
+add wave -position end  sim:/input_handler_tb/state
 add wave -position end  sim:/input_handler_tb/reset
 add wave -position end  sim:/input_handler_tb/logic_1_button
 add wave -position end  sim:/input_handler_tb/logic_0_button
 add wave -position end  sim:/input_handler_tb/clk
 add wave -position end  sim:/input_handler_tb/activity_button
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 run -all
-# Error: Invalid coordinate or output. Expected (3, 1), got ( 0,  0).
-# ** Note: $finish    : D:/altera/13.1/Projects/TermProject/input_handler_tb.v(72)
-#    Time: 400 ns  Iteration: 0  Instance: /input_handler_tb
-# 1
-# Break in Module input_handler_tb at D:/altera/13.1/Projects/TermProject/input_handler_tb.v line 72
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1110, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1111, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1111, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 1111, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 1111, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
 vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module input_handler_tb
@@ -136,34 +103,122 @@ vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_ha
 restart
 # Loading work.input_handler_tb
 # Loading work.input_handler
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+restart
+# Loading work.input_handler_tb
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler_tb
+# 
+# Top level modules:
+# 	input_handler_tb
+restart
+# Loading work.input_handler_tb
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 00
 vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module input_handler
@@ -179,115 +234,220 @@ vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_ha
 restart
 # Loading work.input_handler_tb
 # Loading work.input_handler
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 run -all
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 0110, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  250ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  270ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  330ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  350ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  370ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# ** Error: D:/altera/13.1/Projects/TermProject/input_handler_tb.v(2): near "initial": syntax error, unexpected initial, expecting class
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 0110, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  250ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  270ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  330ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  350ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  370ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0011, x_counter=0100, y_output = 0000, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  110ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  150ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  190ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  230ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  270ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  310ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  350ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  390ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  430ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  470ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  510ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  550ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  590ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  630ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  670ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  710ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
+restart
+# Loading work.input_handler
+run -all
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  390ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  450ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 00
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0010, valid_coordinate = 0, state = 00
+# At time                  570ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  590ns, x_output = 0001, x_counter=0100, y_output = 0100, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  610ns, x_output = 0001, x_counter=0100, y_output = 0100, y_counter=0011, valid_coordinate = 0, state = 00
+# At time                  650ns, x_output = 0001, x_counter=0100, y_output = 0100, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  670ns, x_output = 0001, x_counter=0100, y_output = 0010, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  690ns, x_output = 0001, x_counter=0100, y_output = 0010, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 0010, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 0010, y_counter=0100, valid_coordinate = 0, state = 00
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_handler
+# 
+# Top level modules:
+# 	input_handler
 vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module input_handler_tb
 # 
 # Top level modules:
 # 	input_handler_tb
-# Load canceled
 restart
 # Loading work.input_handler_tb
+# Loading work.input_handler
 run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
-# 
-# Top level modules:
-# 	input_handler_tb
-restart
-# Loading work.input_handler_tb
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  110ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  190ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
-# At time                  270ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
-# At time                  430ns, x_output = 0111, y_output = 0000, valid_coordinate = 0
-# At time                  510ns, x_output = 1011, y_output = 0000, valid_coordinate = 0
-# At time                  590ns, x_output = 1101, y_output = 0000, valid_coordinate = 0
-# At time                  670ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
-# 
-# Top level modules:
-# 	input_handler_tb
-# internal error on MenuItemCan 
-# m is .mBar.file label is End Simulation state is disabled 
-#  Trace back:  
-#    <5: ::Vsimmenu::MenuItemCan .mBar.file {End Simulation} disabled 
-#    >4: ::.main_pane.wave.interior.cs.body.pw.wf.tree Action .main_pane.wave SetMenuState {{can_open {::Vsimmenu::MenuItemCan .mBar.file Open...}} {can_close_file {::Vsimmenu::MenuItemCan .mBar.file {End Simulation}}} {can_save {::Vsimmenu::MenuItemCan .mBar.file {Save Dataset...}}} {can_saveas {::Vsimmenu::MenuItemCan .mBar.file {Save List...}}} {can_report {::Vsimmenu::MenuItemCan .mBar.file Report...}} {can_use_source_file {::Vsimmenu::MenuItemCan .mBar.file {Use Source...}}} {can_environment {::Vsimmenu::MenuItemCan .mBar.file Environment}} {can_page_setup {::Vsimmenu::MenuItemCan .mBar.file {Page Setup...}}} {can_print {::Vsimmenu::MenuItemCan .mBar.file Print...}} {can_print_postscript {::Vsimmenu::MenuItemCan .mBar.file {Print Postscript...}}} {can_close_window {::Vsimmenu::MenuItemCan .mBar.file {Close Window}}}} 
-#    <3: ::Wave <trace variable?>  
-#    >2: ::.vcop Action SetMenuState {{can_open {::Vsimmenu::MenuItemCan .mBar.file Open...}} {can_close_file {::Vsimmenu::MenuItemCan .mBar.file {End Simulation}}} {can_save {::Vsimmenu::MenuItemCan .mBar.file {Save Dataset...}}} {can_saveas {::Vsimmenu::MenuItemCan .mBar.file {Save List...}}} {can_report {::Vsimmenu::MenuItemCan .mBar.file Report...}} {can_use_source_file {::Vsimmenu::MenuItemCan .mBar.file {Use Source...}}} {can_environment {::Vsimmenu::MenuItemCan .mBar.file Environment}} {can_page_setup {::Vsimmenu::MenuItemCan .mBar.file {Page Setup...}}} {can_print {::Vsimmenu::MenuItemCan .mBar.file Print...}} {can_print_postscript {::Vsimmenu::MenuItemCan .mBar.file {Print Postscript...}}} {can_close_window {::Vsimmenu::MenuItemCan .mBar.file {Close Window}}}} 
-#    <1: ::Vsimmenu::DefaultMenuPostCmd .mBar.file {FileMenuPostCmd .mBar.file} SetMenuState 
-restart
-# Loading work.input_handler_tb
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  110ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  190ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
-# At time                  270ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
-# At time                  430ns, x_output = 0111, y_output = 0000, valid_coordinate = 0
-# At time                  510ns, x_output = 1011, y_output = 0000, valid_coordinate = 0
-# At time                  590ns, x_output = 1101, y_output = 0000, valid_coordinate = 0
-# At time                  670ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-restart
+# At time                    0ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = x, state = xx
+# At time                   10ns, x_output = xxxx, x_counter=xxxx, y_output = xxxx, y_counter=xxxx, valid_coordinate = 0, state = xx
+# At time                   20ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                   90ns, x_output = 0000, x_counter=0000, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  110ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  130ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  170ns, x_output = 1000, x_counter=0001, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  190ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  210ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  250ns, x_output = 0100, x_counter=0010, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  270ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  290ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  330ns, x_output = 0010, x_counter=0011, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  350ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 01
+# At time                  370ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  390ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 00
+# At time                  410ns, x_output = 0001, x_counter=0100, y_output = 0000, y_counter=0000, valid_coordinate = 0, state = 10
+# At time                  430ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  450ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0001, valid_coordinate = 0, state = 00
+# At time                  490ns, x_output = 0001, x_counter=0100, y_output = 1000, y_counter=0001, valid_coordinate = 0, state = 10
+# At time                  510ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  530ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0010, valid_coordinate = 0, state = 00
+# At time                  570ns, x_output = 0001, x_counter=0100, y_output = 1100, y_counter=0010, valid_coordinate = 0, state = 10
+# At time                  590ns, x_output = 0001, x_counter=0100, y_output = 0110, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  610ns, x_output = 0001, x_counter=0100, y_output = 0110, y_counter=0011, valid_coordinate = 0, state = 00
+# At time                  650ns, x_output = 0001, x_counter=0100, y_output = 0110, y_counter=0011, valid_coordinate = 0, state = 10
+# At time                  670ns, x_output = 0001, x_counter=0100, y_output = 0011, y_counter=0100, valid_coordinate = 0, state = 10
+# At time                  690ns, x_output = 0001, x_counter=0100, y_output = 0011, y_counter=0100, valid_coordinate = 0, state = 11
+# At time                  730ns, x_output = 0001, x_counter=0100, y_output = 0011, y_counter=0100, valid_coordinate = 1, state = 00
+# At time                  750ns, x_output = 0001, x_counter=0100, y_output = 0011, y_counter=0100, valid_coordinate = 0, state = 00
+# Break key hit 
+# Break in Module input_handler_tb at D:/altera/13.1/Projects/TermProject/input_handler_tb.v line 23

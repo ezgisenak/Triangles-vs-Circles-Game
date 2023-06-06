@@ -1,5 +1,5 @@
 Analysis & Synthesis report for termProject
-Sun Jun 04 14:59:02 2023
+Tue Jun 06 15:29:40 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,12 +13,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |input_handler|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +42,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 04 14:59:02 2023      ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 06 15:29:40 2023      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; termProject                                ;
 ; Top-level Entity Name           ; input_handler                              ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 21                                         ;
-; Total pins                      ; 14                                         ;
+; Total registers                 ; 19                                         ;
+; Total pins                      ; 24                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -182,23 +180,23 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 14        ;
+; Estimate of Logic utilization (ALMs needed) ; 13        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 22        ;
+; Combinational ALUT usage for logic          ; 18        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 4         ;
-;     -- 5 input functions                    ; 6         ;
+;     -- 6 input functions                    ; 6         ;
+;     -- 5 input functions                    ; 4         ;
 ;     -- 4 input functions                    ; 4         ;
-;     -- <=3 input functions                  ; 8         ;
+;     -- <=3 input functions                  ; 4         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 21        ;
+; Dedicated logic registers                   ; 19        ;
 ;                                             ;           ;
-; I/O pins                                    ; 14        ;
+; I/O pins                                    ; 24        ;
 ; Total DSP Blocks                            ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 21        ;
-; Total fan-out                               ; 180       ;
-; Average fan-out                             ; 2.54      ;
+; Maximum fan-out                             ; 19        ;
+; Total fan-out                               ; 187       ;
+; Average fan-out                             ; 2.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -207,33 +205,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |input_handler             ; 22 (22)           ; 21 (21)      ; 0                 ; 0          ; 14   ; 0            ; |input_handler      ; work         ;
+; |input_handler             ; 18 (18)           ; 19 (19)      ; 0                 ; 0          ; 24   ; 0            ; |input_handler      ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------+
-; State Machine - |input_handler|state                                         ;
-+----------------+----------------+---------------+---------------+------------+
-; Name           ; state.VALIDATE ; state.Y_INPUT ; state.X_INPUT ; state.IDLE ;
-+----------------+----------------+---------------+---------------+------------+
-; state.IDLE     ; 0              ; 0             ; 0             ; 0          ;
-; state.X_INPUT  ; 0              ; 0             ; 1             ; 1          ;
-; state.Y_INPUT  ; 0              ; 1             ; 0             ; 1          ;
-; state.VALIDATE ; 1              ; 0             ; 0             ; 1          ;
-+----------------+----------------+---------------+---------------+------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; state~4                               ; Lost fanout        ;
-; state~5                               ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
-+---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -241,12 +215,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,8 +230,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |input_handler|x_output[3]~reg0 ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |input_handler|x_output[0]~reg0 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |input_handler|x_output[0]~reg0 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |input_handler|y_output[0]~reg0 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -276,7 +250,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jun 04 14:59:01 2023
+    Info: Processing started: Tue Jun 06 15:29:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off termProject -c termProject
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 0 design units, including 0 entities, in source file trianglesvscircles.v
@@ -287,20 +261,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file input_h
     Info (12023): Found entity 1: input_handler_tb
 Info (12021): Found 0 design units, including 0 entities, in source file debouncer.v
 Info (12127): Elaborating entity "input_handler" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at input_handler.v(55): variable "x_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at input_handler.v(63): variable "y_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 29 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4714 megabytes
-    Info: Processing ended: Sun Jun 04 14:59:02 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Tue Jun 06 15:29:40 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

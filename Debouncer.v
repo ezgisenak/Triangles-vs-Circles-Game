@@ -1,4 +1,4 @@
-/*module Debouncer (
+module Debouncer (
     input wire clk, reset, button_in,
     output reg button_out
 );
@@ -24,4 +24,3 @@
         end
     end
 endmodule
-*/
