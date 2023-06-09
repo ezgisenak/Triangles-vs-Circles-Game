@@ -3,41 +3,41 @@ K3
 13
 cModel Technology
 Z0 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
-vinput_handler
-I`P]60]CE7c5DmR?Wc>>^_0
-V3@3d625=LhJjPTeSbFLiT2
+vdebounced_input_handler
+IoF0379IEId9FXoRAdDCWD1
+V[cmRh9<`cLmQoh=<3XdmX2
 Z1 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
-w1686054500
-8D:/altera/13.1/Projects/TermProject/input_handler.v
-FD:/altera/13.1/Projects/TermProject/input_handler.v
+w1686170545
+8D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
+FD:/altera/13.1/Projects/TermProject/debounced_input_handler.v
 L0 1
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-work work -O0
 !i10b 1
-!s100 bTZ54I_kk1d;l<Xf1]a>Q0
+!s100 <5chbJh@fOfFZ_dPFkEZe2
 !s85 0
-!s108 1686054585.524000
-!s107 D:/altera/13.1/Projects/TermProject/input_handler.v|
-!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/input_handler.v|
+!s108 1686170557.481000
+!s107 D:/altera/13.1/Projects/TermProject/debounced_input_handler.v|
+!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/debounced_input_handler.v|
 !s101 -O0
-vinput_handler_tb
+vdebounced_input_handler_tb
 !i10b 1
-!s100 FgS4lHln=5DB7d=oLD<He3
-I:ISLS2SUXzK5UJ82LIf<z3
-V:NoE9i287c?NdDT?57MIa1
+!s100 c=K8VB_@^AD[eY_OSW2Ib2
+IMcoS@D_0WZe>7g7aBU0783
+VTl5>URdHA1C>=i_4TDef23
 R1
-w1686054576
-8D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-FD:/altera/13.1/Projects/TermProject/input_handler_tb.v
+w1686170162
+8D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
+FD:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
 L0 3
 R2
 r1
 !s85 0
 31
-!s108 1686054593.591000
-!s107 D:/altera/13.1/Projects/TermProject/input_handler_tb.v|
-!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/input_handler_tb.v|
+!s108 1686170559.435000
+!s107 D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v|
+!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v|
 !s101 -O0
 R3

@@ -1,4 +1,4 @@
-/*module TrianglesVsCircles (
+module TrianglesVsCircles (
   input wire clk, 
   input wire reset,
   input wire logic_0_button,
@@ -49,23 +49,87 @@
 
   always_comb begin
     case(state)
-      IDLE: begin
-        // Idle state
-      end
-      TRIANGLES_TURN: begin
-        // Triangles team's turn
-      end
-      CIRCLES_TURN: begin
-        // Circles team's turn
-      end
-      CHECK_WIN: begin
-        // Checking for a win
-      end
-      GAME_OVER: begin
-        // Game over
-      end
+        IDLE: begin
+            if (activity_button_d) begin
+                current_player <= 0; // Start with circles
+                reset_game_state();
+                next_state = TRIANGLES_TURN;
+            end else begin
+                next_state = IDLE;
+            end
+        end
+
+        TRIANGLES_TURN: begin
+            if (activity_button_d) begin
+                if (is_valid_move(x_output, y_output)) begin
+                    board[x_output][y_output] <= TRIANGLE;
+                    total_moves_triangles <= total_moves_triangles + 1;
+                    recent_position_triangles <= {x_output, y_output};
+                    next_state = CHECK_WIN;
+                end
+            end else begin
+                next_state = TRIANGLES_TURN;
+            end
+        end
+
+        CIRCLES_TURN: begin
+            if (activity_button_d) begin
+                if (is_valid_move(x_output, y_output)) begin
+                    board[x_output][y_output] <= CIRCLE;
+                    total_moves_circles <= total_moves_circles + 1;
+                    recent_position_circles <= {x_output, y_output};
+                    next_state = CHECK_WIN;
+                end
+            end else begin
+                next_state = CIRCLES_TURN;
+            end
+        end
+
+        CHECK_WIN: begin
+            if (current_player == 0) begin // Check if circles won
+                if (check_win_condition(CIRCLE, recent_position_circles)) begin
+                    game_outcome <= 0;
+                    next_state = GAME_OVER;
+                end else if (total_moves_circles == MAX_MOVES) begin
+                    game_outcome <= 1; // Draw
+                    next_state = GAME_OVER;
+                end else begin
+                    current_player <= 1; // Switch to triangles
+                    next_state = TRIANGLES_TURN;
+                end
+            end else begin // Check if triangles won
+                if (check_win_condition(TRIANGLE, recent_position_triangles)) begin
+                    game_outcome <= 2;
+                    next_state = GAME_OVER;
+                end else if (total_moves_triangles == MAX_MOVES) begin
+                    game_outcome <= 1; // Draw
+                    next_state = GAME_OVER;
+                end else begin
+                    current_player <= 0; // Switch to circles
+                    next_state = CIRCLES_TURN;
+                end
+            end
+        end
+
+        GAME_OVER: begin
+            if (activity_button_d) begin
+                reset_game_state();
+                next_state = IDLE;
+            end else begin
+                next_state = GAME_OVER;
+            end
+        end
     endcase
-  end
+end
+
+always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+        state <= IDLE;
+    end else begin
+        state <= next_state;
+    end
+end
+
   
     always_ff @(posedge clk) begin
     if (reset) begin
@@ -79,14 +143,13 @@
     end
   end
 	 
-	   always_ff @(posedge clk) begin
+	/*   always_ff @(posedge clk) begin
     if (reset) begin
       // reset the display
     end else begin
       // update the display based on the game state
     end
-  end
-endmodule
+  end */
 
   // Reset game state
   task reset_game_state;
@@ -99,20 +162,71 @@ endmodule
 	end
     endtask
 
-	// Check if the move is valid
-function automatic is_valid_move;
-	
-  input logic [3:0] x_input, // 4 bits for x coordinate
-    input logic [3:0] y_input, // 4 bits for y coordinate
+function [0:0] check_win_condition;
+  input [3:0] recent_x, recent_y;
+  input [1:0] current_piece;
+  
+  integer dx, dy;
+  integer count;
+  
+  // Initialize output to false (no winning condition)
+  check_win_condition = 1'b0;
+  
+  // Vertical check
+  count = 0;
+  for (dy = -3; dy <= 3; dy = dy + 1) begin
+    if (recent_y + dy >= 0 && recent_y + dy < BOARD_SIZE && board[recent_x][recent_y + dy] == current_piece) begin
+      count = count + 1;
+      if (count >= WINNING_PLACEMENT)
+        check_win_condition = 1'b1;
+    end else
+      count = 0;
+  end
 
-  // Check if the coordinates are within the board boundaries
- function logic is_valid_move(input [3:0] x, input [3:0] y);
-    if(x >= SIZE || y >= SIZE || board[x][y] != EMPTY)
-      return 0; // Invalid move
+  // Horizontal check
+  count = 0;
+  for (dx = -3; dx <= 3; dx = dx + 1) begin
+    if (recent_x + dx >= 0 && recent_x + dx < BOARD_SIZE && board[recent_x + dx][recent_y] == current_piece) begin
+      count = count + 1;
+      if (count >= WINNING_PLACEMENT)
+        check_win_condition = 1'b1;
+    end else
+      count = 0;
+  end
+
+  // Diagonal check (/)
+  count = 0;
+  for (dx = -3, dy = -3; dx <= 3 && dy <= 3; dx = dx + 1, dy = dy + 1) begin
+    if (recent_x + dx >= 0 && recent_x + dx < BOARD_SIZE && recent_y + dy >= 0 && recent_y + dy < BOARD_SIZE && board[recent_x + dx][recent_y + dy] == current_piece) begin
+      count = count + 1;
+      if (count >= WINNING_PLACEMENT)
+        check_win_condition = 1'b1;
+    end else
+      count = 0;
+  end
+
+  // Diagonal check (\)
+  count = 0;
+  for (dx = -3, dy = 3; dx <= 3 && dy >= -3; dx = dx + 1, dy = dy - 1) begin
+    if (recent_x + dx >= 0 && recent_x + dx < BOARD_SIZE && recent_y + dy >= 0 && recent_y + dy < BOARD_SIZE && board[recent_x + dx][recent_y + dy] == current_piece) begin
+      count = count + 1;
+      if (count >= WINNING_PLACEMENT)
+        check_win_condition = 1'b1;
+    end else
+      count = 0;
+  end
+endfunction
+
+function [0:0] is_valid_move;
+  input [3:0] x; 
+  input [3:0] y; 
+
+  begin
+    if (x >= BOARD_SIZE || y >= BOARD_SIZE || board[x][y] != EMPTY)
+      is_valid_move = 1'b0; // Invalid move
     else
-      return 1; // Valid move
-  endfunction
+      is_valid_move = 1'b1; // Valid move
+  end
 endfunction
 
 endmodule
-*/

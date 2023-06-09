@@ -1,5 +1,5 @@
 Flow report for termProject
-Tue Jun 06 15:29:40 2023
+Thu Jun 08 23:15:57 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,29 +37,24 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Tue Jun 06 15:29:40 2023      ;
-; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                   ; termProject                                ;
-; Top-level Entity Name           ; input_handler                              ;
-; Family                          ; Cyclone V                                  ;
-; Device                          ; 5CSEMA6F31C6                               ;
-; Timing Models                   ; Preliminary                                ;
-; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 19                                         ;
-; Total pins                      ; 24                                         ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 0                                          ;
-; Total DSP Blocks                ; 0                                          ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI TX Channels          ; 0                                          ;
-; Total PLLs                      ; 0                                          ;
-; Total DLLs                      ; 0                                          ;
-+---------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------+
+; Flow Summary                                                             ;
++-----------------------------+--------------------------------------------+
+; Flow Status                 ; Flow Failed - Thu Jun 08 23:15:57 2023     ;
+; Quartus II 64-Bit Version   ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name               ; termProject                                ;
+; Top-level Entity Name       ; check_win_condition_wrapper                ;
+; Family                      ; Cyclone V                                  ;
+; Device                      ; 5CSEMA6F31C6                               ;
+; Timing Models               ; Preliminary                                ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                  ;
+; Total registers             ; N/A until Partition Merge                  ;
+; Total pins                  ; N/A until Partition Merge                  ;
+; Total virtual pins          ; N/A until Partition Merge                  ;
+; Total block memory bits     ; N/A until Partition Merge                  ;
+; Total PLLs                  ; N/A until Partition Merge                  ;
+; Total DLLs                  ; N/A until Partition Merge                  ;
++-----------------------------+--------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,28 +62,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2023 15:29:39 ;
+; Start date & time ; 06/08/2023 23:15:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; termProject         ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name   ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193675815359138.168605457817644 ; --            ; --            ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --            ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --            ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; input_handler ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; input_handler ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; input_handler ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; input_handler                   ; termProject   ; --            ; --             ;
-+-------------------------------------+---------------------------------+---------------+---------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-----------------------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name                 ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-----------------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 193675815359138.168625535701628 ; --            ; --                          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --                          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --                          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --                          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --                          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; check_win_condition_wrapper ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; check_win_condition_wrapper ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; check_win_condition_wrapper ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --                          ; --             ;
+; TOP_LEVEL_ENTITY                    ; check_win_condition_wrapper     ; termProject   ; --                          ; --             ;
++-------------------------------------+---------------------------------+---------------+-----------------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -96,8 +91,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:00     ; 1.0                     ; 4650 MB             ; 00:00:01                           ;
+; Total                ; 00:00:00     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
