@@ -1,4 +1,5 @@
 # Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# A bookmarks file was found in the current directory with 1 bookmark
 # do termProject_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,237 +11,26 @@
 # ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/debounced_input_handler.v}
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module TrianglesVsCircles
 # 
 # Top level modules:
-# 	debounced_input_handler
+# 	TrianglesVsCircles
 # 
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/reset_game_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module reset_game_tb
+# ** Error: D:/altera/13.1/Projects/TermProject/reset_game_tb.v(10): Declarations not allowed in unnamed block.
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/reset_game_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reset_game_tb
 # 
 # Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb 
-# Loading work.debounced_input_handler_tb
-# ** Error: (vsim-3033) D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v(17): Instantiation of 'input_handler' failed. The design unit was not found.
-# 
-#         Region: /debounced_input_handler_tb
-#         Searched libraries:
-#             D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work
-# Error loading design
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb 
-# Loading work.debounced_input_handler_tb
-# ** Error: (vsim-3033) D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v(17): Instantiation of 'input_handler' failed. The design unit was not found.
-# 
-#         Region: /debounced_input_handler_tb
-#         Searched libraries:
-#             D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work
-# Error loading design
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb 
-# Loading work.debounced_input_handler_tb
-# ** Error: (vsim-3033) D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v(17): Instantiation of 'input_handler' failed. The design unit was not found.
-# 
-#         Region: /debounced_input_handler_tb
-#         Searched libraries:
-#             D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work
-# Error loading design
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb 
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-# do termProject_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/debounced_input_handler.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-# 
-add wave -position end  sim:/debounced_input_handler_tb/y_output
-add wave -position end  sim:/debounced_input_handler_tb/x_output
-add wave -position end  sim:/debounced_input_handler_tb/valid_coordinate
-add wave -position end  sim:/debounced_input_handler_tb/reset
-add wave -position end  sim:/debounced_input_handler_tb/logic_1_button
-add wave -position end  sim:/debounced_input_handler_tb/logic_0_button
-add wave -position end  sim:/debounced_input_handler_tb/clk
-add wave -position end  sim:/debounced_input_handler_tb/activity_button
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  170ns, x_output = 0000, y_output = 1000, valid_coordinate = 0
-# At time                  190ns, x_output = 0000, y_output = 1100, valid_coordinate = 0
-# At time                  210ns, x_output = 0000, y_output = 1110, valid_coordinate = 0
-# At time                  230ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-# At time                  770ns, x_output = 0000, y_output = 1111, valid_coordinate = 1
-# At time                  790ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 0000, y_output = 1000, valid_coordinate = 0
-# At time                  370ns, x_output = 0000, y_output = 1100, valid_coordinate = 0
-# At time                  390ns, x_output = 0000, y_output = 1110, valid_coordinate = 0
-# At time                  410ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-# At time                 1870ns, x_output = 0000, y_output = 1111, valid_coordinate = 1
-# At time                 1890ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 0000, y_output = 1000, valid_coordinate = 0
-# At time                  370ns, x_output = 0000, y_output = 1100, valid_coordinate = 0
-# At time                  390ns, x_output = 0000, y_output = 1110, valid_coordinate = 0
-# At time                  410ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-# At time                 1870ns, x_output = 0000, y_output = 1111, valid_coordinate = 1
-# At time                 1890ns, x_output = 0000, y_output = 1111, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-run -all
-restart
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# A bookmark named "bookmark0" has been added for window "Structure"
-# Bookmarks will be automatically saved and restored
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler
-# 
-# Top level modules:
-# 	input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
-# 
-# Top level modules:
-# 	input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb 
-# Bookmarks have been exported for window "Structure" to: D:/altera/13.1/Projects/TermProject/simulation/modelsim/bookmarks.do
-# Loading work.input_handler_tb
-# Loading work.input_handler
+# 	reset_game_tb
+vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.reset_game_tb
+# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.reset_game_tb 
+# Loading work.reset_game_tb
 # A bookmarks file was found in the current directory with 1 bookmark
 # Bookmark(s) were restored for window "Structure"
 # do termProject_run_msim_rtl_verilog.do 
@@ -251,73 +41,130 @@ vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui wor
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/debounced_input_handler.v}
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module TrianglesVsCircles
 # 
 # Top level modules:
-# 	debounced_input_handler
+# 	TrianglesVsCircles
 # 
-add wave -position end  sim:/input_handler_tb/y_output
-add wave -position end  sim:/input_handler_tb/x_output
-add wave -position end  sim:/input_handler_tb/valid_coordinate
-add wave -position end  sim:/input_handler_tb/reset
-add wave -position end  sim:/input_handler_tb/logic_1_button
-add wave -position end  sim:/input_handler_tb/logic_0_button
-add wave -position end  sim:/input_handler_tb/clk
-add wave -position end  sim:/input_handler_tb/activity_button
+add wave -position end  sim:/reset_game_tb/board
 run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  110ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  190ns, x_output = 0100, y_output = 0000, valid_coordinate = 0
-# At time                  270ns, x_output = 0010, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 0001, y_output = 0000, valid_coordinate = 0
-# At time                  430ns, x_output = 0001, y_output = 1000, valid_coordinate = 0
-# At time                  510ns, x_output = 0001, y_output = 1100, valid_coordinate = 0
-# At time                  590ns, x_output = 0001, y_output = 0110, valid_coordinate = 0
-# At time                  670ns, x_output = 0001, y_output = 0011, valid_coordinate = 0
-# At time                  730ns, x_output = 0001, y_output = 0011, valid_coordinate = 1
-# At time                  750ns, x_output = 0001, y_output = 0011, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
+# Test passed
+# ** Note: $finish    : D:/altera/13.1/Projects/TermProject/reset_game_tb.v(33)
+#    Time: 0 ps  Iteration: 0  Instance: /reset_game_tb
+# 1
+# Break in Module reset_game_tb at D:/altera/13.1/Projects/TermProject/reset_game_tb.v line 33
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/reset_game_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
+# -- Compiling module reset_game_tb
 # 
 # Top level modules:
-# 	input_handler_tb
+# 	reset_game_tb
 restart
-# Loading work.input_handler_tb
-# ** Error: (vsim-3033) D:/altera/13.1/Projects/TermProject/input_handler_tb.v(17): Instantiation of 'input_handler' failed. The design unit was not found.
+# Loading work.reset_game_tb
+run -all
+# Test passed
+restart
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/reset_game_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reset_game_tb
 # 
-#         Region: /input_handler_tb
-#         Searched libraries:
-#             D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb 
-# Loading work.input_handler_tb
-# ** Error: (vsim-3033) D:/altera/13.1/Projects/TermProject/input_handler_tb.v(17): Instantiation of 'input_handler' failed. The design unit was not found.
+# Top level modules:
+# 	reset_game_tb
+run -all
+# Test passed
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/reset_game_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reset_game_tb
 # 
-#         Region: /input_handler_tb
-#         Searched libraries:
-#             D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work
+# Top level modules:
+# 	reset_game_tb
+restart
+# Loading work.reset_game_tb
+run
+run
+run
+run
+run
+run
+run
+restart
+run -all
+# Test passed
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# ** Error: D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v(10): Declarations not allowed in unnamed block.
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+restart
+restart
+# Load canceled
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module is_valid_move_tb
+# 
+# Top level modules:
+# 	is_valid_move_tb
+vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb
+# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb 
+# No bookmark changes exist in window "Structure"
+# Loading work.is_valid_move_tb
+# A bookmarks file was found in the current directory with 1 bookmark
+# Bookmark(s) were restored for window "Structure"
+# do termProject_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TrianglesVsCircles
+# 
+# Top level modules:
+# 	TrianglesVsCircles
+# 
+add wave -position end  sim:/is_valid_move_tb/y
+add wave -position end  sim:/is_valid_move_tb/x
+add wave -position end  sim:/is_valid_move_tb/board
+run -all
+# Test case 1: Pass
+# Test case 2: Pass
+# Test case 3: Pass
+# ** Note: $finish    : D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v(42)
+#    Time: 0 ps  Iteration: 0  Instance: /is_valid_move_tb
+# 1
+# Break in Module is_valid_move_tb at D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v line 42
+restart
+# ** Error: (vsim-3170) Could not find 'D:/altera/13.1/Projects/TermProject/simulation/modelsim/rtl_work.is_valid_move_tb'.
+# 
+# Load canceled
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module is_valid_move_tb
+# 
+# Top level modules:
+# 	is_valid_move_tb
+vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb
+# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb 
 # Error loading design
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler.v
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler
+# -- Compiling module is_valid_move_tb
 # 
 # Top level modules:
-# 	input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module input_handler_tb
-# 
-# Top level modules:
-# 	input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.input_handler_tb 
-# Loading work.input_handler_tb
-# Loading work.input_handler
+# 	is_valid_move_tb
+vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb
+# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.is_valid_move_tb 
+# Loading work.is_valid_move_tb
 # Bookmark "bookmark0" already exists with that definition in window "Structure", ignoring
 # A bookmarks file was found in the current directory with 1 bookmark
 # do termProject_run_msim_rtl_verilog.do 
@@ -328,252 +175,52 @@ vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui wor
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/debounced_input_handler.v}
+# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module TrianglesVsCircles
 # 
 # Top level modules:
-# 	debounced_input_handler
+# 	TrianglesVsCircles
 # 
 run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  290ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  310ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
-# At time                  330ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-# At time                  350ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
-# At time                  390ns, x_output = 1111, y_output = 1000, valid_coordinate = 0
-# At time                  410ns, x_output = 1111, y_output = 1100, valid_coordinate = 0
-# At time                  490ns, x_output = 0111, y_output = 1100, valid_coordinate = 0
-# At time                  510ns, x_output = 0011, y_output = 1100, valid_coordinate = 0
-# At time                  530ns, x_output = 0001, y_output = 1100, valid_coordinate = 0
-# At time                  550ns, x_output = 0000, y_output = 1100, valid_coordinate = 0
-# At time                  930ns, x_output = 0000, y_output = 0110, valid_coordinate = 0
-# At time                  950ns, x_output = 0000, y_output = 0011, valid_coordinate = 0
-# At time                  970ns, x_output = 0000, y_output = 0001, valid_coordinate = 0
-# At time                 1870ns, x_output = 0000, y_output = 0001, valid_coordinate = 1
-# At time                 1890ns, x_output = 0000, y_output = 0001, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
+# Test case 1: Pass
+# Test case 2: Pass
+# Test case 3: Pass
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module is_valid_move_tb
 # 
 # Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb
-# vsim +altera -do termProject_run_msim_rtl_verilog.do -l msim_transcript -gui work.debounced_input_handler_tb 
-# No bookmark changes exist in window "Structure"
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-# A bookmarks file was found in the current directory with 1 bookmark
-# Bookmark(s) were restored for window "Structure"
-# do termProject_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject {D:/altera/13.1/Projects/TermProject/debounced_input_handler.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-# 
-add wave -position end  sim:/debounced_input_handler_tb/y_output
-add wave -position end  sim:/debounced_input_handler_tb/x_output
-add wave -position end  sim:/debounced_input_handler_tb/valid_coordinate
-add wave -position end  sim:/debounced_input_handler_tb/reset
-add wave -position end  sim:/debounced_input_handler_tb/logic_1_button
-add wave -position end  sim:/debounced_input_handler_tb/logic_0_button
-add wave -position end  sim:/debounced_input_handler_tb/clk
-add wave -position end  sim:/debounced_input_handler_tb/activity_button
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# At time                   10ns, x_output = xxxx, y_output = xxxx, valid_coordinate = 0
-# At time                   20ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-# Load canceled
+# 	is_valid_move_tb
 restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  950ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  970ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
-# At time                  990ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-# At time                 1010ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
-# At time                 1050ns, x_output = 1111, y_output = 1000, valid_coordinate = 0
-# At time                 1070ns, x_output = 1111, y_output = 1100, valid_coordinate = 0
-# At time                 1090ns, x_output = 1111, y_output = 1110, valid_coordinate = 0
-# At time                 1110ns, x_output = 1111, y_output = 1111, valid_coordinate = 0
-# At time                 4250ns, x_output = 1111, y_output = 1111, valid_coordinate = 1
-# At time                 4270ns, x_output = 1111, y_output = 1111, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
+# Loading work.is_valid_move_tb
 restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
 run -all
-# At time                    0ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
+# Test case 1: Pass
+# Test case 2: Pass
+# Test case 3: Pass
+# WARNING: No extended dataflow license exists
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module is_valid_move_tb
 # 
 # Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
+# 	is_valid_move_tb
 restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
+# Loading work.is_valid_move_tb
 run -all
-# At time                    0ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-# At time                  950ns, x_output = 1000, y_output = 0000, valid_coordinate = 0
-# At time                  970ns, x_output = 1100, y_output = 0000, valid_coordinate = 0
-# At time                  990ns, x_output = 1110, y_output = 0000, valid_coordinate = 0
-# At time                 1010ns, x_output = 1111, y_output = 0000, valid_coordinate = 0
-# At time                 1050ns, x_output = 1111, y_output = 1000, valid_coordinate = 0
-# At time                 1070ns, x_output = 1111, y_output = 1100, valid_coordinate = 0
-# At time                 1090ns, x_output = 1111, y_output = 1110, valid_coordinate = 0
-# At time                 1110ns, x_output = 1111, y_output = 1111, valid_coordinate = 0
-# At time                 4250ns, x_output = 1111, y_output = 1111, valid_coordinate = 1
-# At time                 4270ns, x_output = 1111, y_output = 1111, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
+# Test case 1: Pass
+# Test case 2: Pass
+# Test case 3: Pass
+vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
+# -- Compiling module is_valid_move_tb
 # 
 # Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-run -all
+# 	is_valid_move_tb
 restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
+# Loading work.is_valid_move_tb
 run -all
-# At time                    0ns, x_output = 0000, y_output = 0000, valid_coordinate = 0
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler
-# 
-# Top level modules:
-# 	debounced_input_handler
-vlog -reportprogress 300 -work work D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module debounced_input_handler_tb
-# 
-# Top level modules:
-# 	debounced_input_handler_tb
-restart
-# Loading work.debounced_input_handler_tb
-# Loading work.debounced_input_handler
-run -all
-# At time                    0ns, x_output = xxxx, y_output = xxxx, valid_coordinate = x
-# Break key hit 
-# Break in Module debounced_input_handler_tb at D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v line 22
+# Test case 1: Pass
+# Test case 2: Fail
+# Test case 3: Pass

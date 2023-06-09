@@ -3,41 +3,43 @@ K3
 13
 cModel Technology
 Z0 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
-vdebounced_input_handler
-IoF0379IEId9FXoRAdDCWD1
-V[cmRh9<`cLmQoh=<3XdmX2
+vis_valid_move_tb
+!i10b 1
+!s100 MYfnA>Lg:zS7mm8aOLHAg2
+I@cl>Nc=[iJA;E7e]EJSKF3
+VOYggkc@CDa:TcW[@okW=C1
 Z1 dD:\altera\13.1\Projects\TermProject\simulation\modelsim
-w1686170545
-8D:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-FD:/altera/13.1/Projects/TermProject/debounced_input_handler.v
-L0 1
+w1686321931
+8D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+FD:/altera/13.1/Projects/TermProject/is_valid_move_tb.v
+L0 3
 Z2 OV;L;10.1d;51
 r1
-31
-Z3 o-work work -O0
-!i10b 1
-!s100 <5chbJh@fOfFZ_dPFkEZe2
 !s85 0
-!s108 1686170557.481000
-!s107 D:/altera/13.1/Projects/TermProject/debounced_input_handler.v|
-!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/debounced_input_handler.v|
+31
+!s108 1686321945.291000
+!s107 D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v|
+!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/is_valid_move_tb.v|
 !s101 -O0
-vdebounced_input_handler_tb
-!i10b 1
-!s100 c=K8VB_@^AD[eY_OSW2Ib2
-IMcoS@D_0WZe>7g7aBU0783
-VTl5>URdHA1C>=i_4TDef23
+o-work work -O0
+vTrianglesVsCircles
+IX;PWVk[hK]m?:P2oiC4PY3
+VM_oY1iz[`JLFX0D4I;Cl;2
 R1
-w1686170162
-8D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-FD:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v
-L0 3
+w1686321098
+8D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v
+FD:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v
+L0 1
 R2
 r1
-!s85 0
 31
-!s108 1686170559.435000
-!s107 D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v|
-!s90 -reportprogress|300|-work|work|D:/altera/13.1/Projects/TermProject/debounced_input_handler_tb.v|
+o-vlog01compat -work work -O0
+n@triangles@vs@circles
+!i10b 1
+!s100 MHozg;`nBX4b_eRLj4I941
+!s85 0
+!s108 1686321632.331000
+!s107 D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/altera/13.1/Projects/TermProject|D:/altera/13.1/Projects/TermProject/TrianglesVsCircles.v|
 !s101 -O0
-R3
+!s92 -vlog01compat -work work +incdir+D:/altera/13.1/Projects/TermProject -O0

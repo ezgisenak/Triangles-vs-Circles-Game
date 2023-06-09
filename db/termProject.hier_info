@@ -1,17 +1,40 @@
-|debounced_input_handler
+|TrianglesVsCircles
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 logic_0_button => ~NO_FANOUT~
 logic_1_button => ~NO_FANOUT~
 activity_button => ~NO_FANOUT~
-x_output[0] <= <GND>
-x_output[1] <= <GND>
-x_output[2] <= <GND>
-x_output[3] <= <GND>
-y_output[0] <= <GND>
-y_output[1] <= <GND>
-y_output[2] <= <GND>
-y_output[3] <= <GND>
-valid_coordinate <= <GND>
+vga_hsync << <GND>
+vga_vsync << <GND>
+vga_red[0] << <GND>
+vga_red[1] << <GND>
+vga_red[2] << <GND>
+vga_red[3] << <GND>
+vga_red[4] << <GND>
+vga_red[5] << <GND>
+vga_red[6] << <GND>
+vga_red[7] << <GND>
+vga_red[8] << <GND>
+vga_red[9] << <GND>
+vga_green[0] << <GND>
+vga_green[1] << <GND>
+vga_green[2] << <GND>
+vga_green[3] << <GND>
+vga_green[4] << <GND>
+vga_green[5] << <GND>
+vga_green[6] << <GND>
+vga_green[7] << <GND>
+vga_green[8] << <GND>
+vga_green[9] << <GND>
+vga_blue[0] << <GND>
+vga_blue[1] << <GND>
+vga_blue[2] << <GND>
+vga_blue[3] << <GND>
+vga_blue[4] << <GND>
+vga_blue[5] << <GND>
+vga_blue[6] << <GND>
+vga_blue[7] << <GND>
+vga_blue[8] << <GND>
+vga_blue[9] << <GND>
 
 

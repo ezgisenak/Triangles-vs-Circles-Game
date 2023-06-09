@@ -16,11 +16,21 @@ module TrianglesVsCircles (
   parameter MAX_MOVES = 25;
   parameter WINNING_PLACEMENT = 4;
   
-  typedef enum logic [2:0] {IDLE, TRIANGLES_TURN, CIRCLES_TURN, CHECK_WIN, GAME_OVER} state_t;
-	state_t state, next_state;
+	parameter IDLE = 3'b000;
+	parameter TRIANGLES_TURN = 3'b001;
+	parameter CIRCLES_TURN = 3'b010;
+	parameter CHECK_WIN = 3'b011;
+	parameter GAME_OVER = 3'b100;
 	
-	 typedef enum logic [1:0] {EMPTY = 2'b00, TRIANGLE = 2'b01, CIRCLE = 2'b10, OCCUPIED = 2'b11} piece_t;
-	
+	reg [2:0] state, next_state;
+
+	parameter EMPTY = 2'b00;
+	parameter TRIANGLE = 2'b01;
+	parameter CIRCLE = 2'b10;
+	parameter OCCUPIED = 2'b11;
+
+	reg [1:0] piece;
+
   // Game state variables
   reg [1:0] board [0:BOARD_SIZE-1][0:BOARD_SIZE-1];
   reg current_player; // 0 for circle 1 for triangle
@@ -47,7 +57,7 @@ module TrianglesVsCircles (
     reset_game_state();
   end
 
-  always_comb begin
+  /*always_comb begin
     case(state)
         IDLE: begin
             if (activity_button_d) begin
@@ -120,7 +130,9 @@ module TrianglesVsCircles (
             end
         end
     endcase
-end
+end 
+
+
 
 always_ff @(posedge clk or posedge reset) begin
     if (reset) begin
@@ -150,7 +162,7 @@ end
       // update the display based on the game state
     end
   end */
-
+  
   // Reset game state
   task reset_game_state;
     integer i, j;
@@ -162,6 +174,7 @@ end
 	end
     endtask
 
+	 /*
 function [0:0] check_win_condition;
   input [3:0] recent_x, recent_y;
   input [1:0] current_piece;
@@ -216,7 +229,7 @@ function [0:0] check_win_condition;
       count = 0;
   end
 endfunction
-
+*/
 function [0:0] is_valid_move;
   input [3:0] x; 
   input [3:0] y; 
@@ -228,5 +241,6 @@ function [0:0] is_valid_move;
       is_valid_move = 1'b1; // Valid move
   end
 endfunction
+
 
 endmodule

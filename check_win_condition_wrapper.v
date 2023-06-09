@@ -1,4 +1,4 @@
-module check_win_condition_wrapper #(parameter BOARD_SIZE = 10)(input wire [3:0] recent_x, input wire [3:0] recent_y, input wire [1:0] piece_type, output wire win);
+/*module check_win_condition_wrapper #(parameter BOARD_SIZE = 10)(input wire [3:0] recent_x, input wire [3:0] recent_y, input wire [1:0] piece_type, output wire win);
   
   reg [1:0] board [0:BOARD_SIZE-1][0:BOARD_SIZE-1];
   
@@ -61,3 +61,4 @@ function [0:0] check_win_condition;
 endfunction
 
 endmodule
+*/
