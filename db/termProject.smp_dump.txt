@@ -1,7 +1,0 @@
-
-State Machine - |debounced_input_handler|state
-Name state.VALIDATE state.Y_INPUT state.X_INPUT state.IDLE 
-state.IDLE 0 0 0 0 
-state.X_INPUT 0 0 1 1 
-state.Y_INPUT 0 1 0 1 
-state.VALIDATE 1 0 0 1 
